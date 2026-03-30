@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manavya Foundation</title>
+
+<style>
+
+/* Reset */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+/* Header */
+header{
+background:#0a6d4a;
+color:white;
+padding:15px 0;
+position:sticky;
+top:0;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+width:90%;
+margin:auto;
+}
+
+nav h1{
+font-size:26px;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:20px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-size:16px;
+}
+
+nav ul li a:hover{
+color:#ffd700;
+}
+
+/* Hero Section */
+.hero{
+height:80vh;
+background:url("https://images.unsplash.com/photo-1521791136064-7986c2920216") center/cover;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+background-color:rgba(0,0,0,0.5);
+background-blend-mode:darken;
+}
+
+.hero h2{
+font-size:42px;
+}
+
+.hero p{
+margin:10px 0;
+font-size:18px;
+}
+
+.hero button{
+padding:12px 25px;
+border:none;
+background:#ffd700;
+cursor:pointer;
+border-radius:5px;
+}
+
+/* Image Slider */
+.slider{
+width:100%;
+height:300px;
+overflow:hidden;
+}
+
+.slides{
+display:flex;
+transition:0.5s;
+}
+
+.slides img{
+width:100%;
+height:300px;
+object-fit:cover;
+}
+
+/* About Section */
+.about{
+padding:60px 12%;
+background:#f4f4f4;
+text-align:center;
+}
+
+.about h2{
+color:#0a6d4a;
+margin-bottom:15px;
+}
+
+.about p{
+font-size:17px;
+line-height:1.8;
+max-width:900px;
+margin:auto;
+text-align:justify;
+}
+
+/* Contact Form */
+.contact{
+padding:60px 10%;
+background:#f4f4f4;
+}
+
+.contact h2{
+text-align:center;
+margin-bottom:20px;
+color:#0a6d4a;
+}
+
+form{
+max-width:500px;
+margin:auto;
+}
+
+input, textarea{
+width:100%;
+padding:10px;
+margin-bottom:10px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+button{
+padding:10px;
+border:none;
+background:#0a6d4a;
+color:white;
+cursor:pointer;
+}
+
+/* Popup */
+.popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+justify-content:center;
+align-items:center;
+}
+
+.popup-content{
+background:white;
+padding:25px;
+border-radius:10px;
+width:300px;
+text-align:center;
+}
+
+.close{
+float:right;
+cursor:pointer;
+color:red;
+}
+
+/* Footer */
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:20px;
+font-size:16px;
+}
+
+footer p{
+margin:5px 0;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+nav{
+flex-direction:column;
+}
+
+nav ul{
+flex-direction:column;
+margin-top:10px;
+}
+
+nav ul li{
+margin:8px 0;
+}
+
+.hero h2{
+font-size:28px;
+}
+
+.about p{
+text-align:left;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<h1>Manavya Foundation</h1>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="hero">
+<div>
+<h2>Helping Humanity Together</h2>
+<p>Working for education, environment and social welfare.</p>
+<button onclick="openPopup()">Become Volunteer</button>
+</div>
+</section>
+
+<!-- Image Slider -->
+<div class="slider">
+<div class="slides" id="slides">
+<img src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a">
+<img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c">
+<img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d">
+</div>
+</div>
+
+<section class="about" id="about">
+<h2>About Us</h2>
+<p>
+Manavya Foundation is a non-profit organization dedicated to helping
+underprivileged communities through education support, healthcare
+awareness, and social welfare programs.To understand community development programs
+aimed at promoting environmental sustainability, sanitation, access to clean water,
+Women empowerment, child welfare,and inclusion of person with disabilities.
+design and implement transformative social interventions aimed at improving
+quality of life, enhancing dignity,and fostering sustainable development among
+economically weaker sections of society.To promote holistic well-being of vulnerable
+and marginalized communities by undertaking initiatives in the fields of education,
+healthcare, livelihood development, nutrition, sanitation, mental health, and social
+welfare. To design and implement transformative social interventions aimed at improving
+quality of life, enhancing dignity, and fostering sustainable development among economically
+weaker sections of society. To advance education by establishing, supporting, or aiding schools,
+learning centers, skill development institutes, vocational training programs, digital literacy
+initiatives, and scholarships for underprivileged individuals. To promote healthcare and
+preventive health awareness, including organizing medical camps, mental health programs,
+community health initiatives, and facilitating access to affordable healthcare services.
+To support livelihood generation and economic empowerment through skill development,
+entrepreneurship support.to undertake any other lawful charitable activties incidental or ancillary
+to the attainment of the above objectives,provided that the same are carried out without profit
+motive and in accordance with applicable laws.
+</p>
+</section>
+
+<section class="contact" id="contact">
+<h2>Contact Us</h2>
+
+<form onsubmit="return validateForm()">
+<input type="text" id="name" placeholder="Your Name">
+<input type="email" id="email" placeholder="Your Email">
+<textarea id="message" placeholder="Your Message"></textarea>
+<button type="submit">Send Message</button>
+</form>
+
+</section>
+
+<!-- Volunteer Popup -->
+<div class="popup" id="popup">
+<div class="popup-content">
+<span class="close" onclick="closePopup()">X</span>
+<h3>Volunteer Form</h3>
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Email">
+<button>Submit</button>
+</div>
+</div>
+
+<footer>
+<p>© 2026 Manavya Foundation | All Rights Reserved</p>
+<p>Contact Number: 9058932838</p>
+</footer>
+
+<script>
+
+/* Slider */
+let index = 0;
+function slideImages(){
+let slides = document.getElementById("slides");
+index++;
+if(index > 2){
+index = 0;
+}
+slides.style.transform = "translateX(" + (-index * 100) + "%)";
+}
+setInterval(slideImages,3000);
+
+/* Popup */
+function openPopup(){
+document.getElementById("popup").style.display="flex";
+}
+
+function closePopup(){
+document.getElementById("popup").style.display="none";
+}
+
+/* Form Validation */
+function validateForm(){
+let name = document.getElementById("name").value;
+let email = document.getElementById("email").value;
+
+if(name==="" || email===""){
+alert("Please fill all fields");
+return false;
+}
+
+alert("Message sent successfully!");
+return true;
+}
+
+</script>
+
+</body>
+</html>
